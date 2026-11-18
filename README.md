@@ -7,22 +7,42 @@ that students are eligible to follow.
 ## Requirements
 
 1. **Student registration and results**
-   - Register student details and account results.
-   - Allow students to optionally provide their high-school or secondary-school
-     subject combination.
-   - Support streams such as Humanities, Business Studies, and Science
-     (including Biology, Physics, Chemistry, Engineering, or STEM).
-   - Record the applicable mathematics level: Advanced Maths or General Maths.
+   - Register students and record their important details and academic results.
+   - Let students provide their high-school or secondary-school subject
+     combination, including Humanities, Business Studies, or Science.
+   - Record Science subjects where applicable (Biology, Physics, Chemistry,
+     Engineering, or STEM) and the mathematics level (Advanced Maths or
+     General Maths).
+   - A student may complete registration without a subject combination, but
+     must provide it before the system can recommend courses.
 2. **Course catalog**
-   - Store and maintain the courses offered by the university.
-3. **Eligibility**
-   - Identify and display courses a student is eligible to follow, based on the
-     student's recorded results and subject combination and each course's
-     requirements.
-4. **Prerequisites**
-   - Record prerequisite relationships between courses.
-   - Prevent a student from being considered eligible to follow a course when
-     they have not met its prerequisites.
+   - Store the courses offered by the university:
+
+   **Humanities**
+   - Bachelor of Arts (BA) in History or Political Science
+   - Bachelor of Arts in Anthropology, Sociology, and Archaeology
+   - Bachelor of Arts in English Communication, Literature, or Journalism
+
+   **Science**
+   - Bachelor of Science (BSc) in Biological Sciences, Chemistry, or Physics
+   - Bachelor of Science in Applied Mathematics, Statistics, or Computer Science
+   - Bachelor of Medicine and Bachelor of Surgery (MBBS)
+
+   **Business Studies**
+   - Bachelor of Business in Accountancy
+   - Bachelor of Business in Applied Economics
+   - Bachelor of Business in Management (or Human Resource Management)
+3. **Eligibility and recommendations**
+   - After registration is complete, categorize students into Humanities,
+     Science, or Business Studies based on their recorded school subject
+     combination or stream.
+   - Recommend courses from the matching stream, taking the student's recorded
+     academic results and course requirements into account.
+4. **Recommendation prerequisites**
+   - Require all important student details needed for recommendations,
+     especially the high-school or secondary-school subject combination.
+   - If required details or prerequisites are missing or unmet, do not
+     recommend courses to the student.
 
 ## Branch assignments
 
@@ -37,6 +57,7 @@ Use the following feature branches and assignments:
 
 ## Core eligibility rule
 
-A course may be recommended only when the student satisfies the course's
-eligibility requirements **and** has met every prerequisite. An unmet
-prerequisite must block the course from being recommended as eligible.
+A course may be recommended only after registration is complete, the student
+has provided the required details (especially their school subject combination),
+and they satisfy the course's eligibility requirements. Missing or unmet
+prerequisites must block course recommendations.
