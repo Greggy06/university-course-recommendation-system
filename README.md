@@ -50,7 +50,7 @@ Use the following feature branches and assignments:
 
 | Branch | Assigned to | Scope |
 |---|---|---|
-| `feature/student-registration-gillion` | Gillion | Student registration, account results, and optional school stream/subject combination |
+| `feature/student-registration` | Gillion | Student registration, account results, and optional school stream/subject combination |
 | `feature/course-catalog-boma` | Boma | University course catalog and course data |
 | `feature/course-eligibility-shehuell` | Shehuell | Eligibility evaluation and course recommendations |
 | `feature/prerequisite-enforcement-gregory` | Gregory | Prerequisite relationships and blocking courses with unmet prerequisites |
@@ -61,3 +61,27 @@ A course may be recommended only after registration is complete, the student
 has provided the required details (especially their school subject combination),
 and they satisfy the course's eligibility requirements. Missing or unmet
 prerequisites must block course recommendations.
+
+## Student registration feature
+
+Gillion's PHP/MySQL registration feature is in [`student-registration/`](./student-registration/).
+It records a student's name, email, password hash, school subject results, and
+optional school stream and mathematics level. Students can register without a
+stream, but the recommendation process should wait until the required school
+subject combination has been provided.
+
+### Setup
+
+1. Create a MySQL database named `university_course_recommendation` and import
+   [`student-registration/database/schema.sql`](./student-registration/database/schema.sql).
+2. Copy `student-registration/config/config.example.php` to
+   `student-registration/config/config.php` and set the MySQL username and
+   password for your environment. The local configuration file is ignored by
+   Git.
+3. Configure the web server's document root to
+   `student-registration/public/` (or use that folder as the web root) and open
+   `register.php`.
+
+The registration form requires at least one subject/result pair. It validates
+input, hashes passwords, protects form submissions with a CSRF token, and uses
+prepared SQL statements. Course recommendations are not part of this feature.
