@@ -52,7 +52,7 @@ Use the following feature branches and assignments:
 |---|---|---|
 | `feature/student-registration-gillion` | Gillion | Student registration, account results, and optional school stream/subject combination |
 | `feature/course-catalog-boma` | Boma | University course catalog and course data |
-| `feature/course-eligibility-shehuell` | Shaquille | Eligibility evaluation and course recommendations |
+| `feature/course-eligibility-shaq` | Shaquille | Eligibility evaluation and course recommendations |
 | `feature/prerequisite-enforcement-gregory` | Gregory | Prerequisite relationships and blocking courses with unmet prerequisites |
 
 ## Core eligibility rule
