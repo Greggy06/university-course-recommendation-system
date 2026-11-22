@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Sky Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="45%" stop-color="#3b82f6"/>
+      <stop offset="85%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+
+    <!-- Sun Glow Gradient -->
+    <radialGradient id="sunGlow" cx="70%" cy="25%" r="35%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#fde047" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Campus Lawn Gradient -->
+    <linearGradient id="lawnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="50%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+
+    <!-- Building Gradients -->
+    <linearGradient id="hallGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="pathGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="800" height="500" fill="url(#skyGrad)"/>
+
+  <!-- Sun Rays & Glow -->
+  <circle cx="560" cy="120" r="140" fill="url(#sunGlow)"/>
+
+  <!-- Soft Clouds -->
+  <g fill="#ffffff" opacity="0.45">
+    <ellipse cx="140" cy="90" rx="60" ry="22"/>
+    <ellipse cx="180" cy="80" rx="45" ry="26"/>
+    <ellipse cx="210" cy="95" rx="50" ry="18"/>
+
+    <ellipse cx="680" cy="110" rx="70" ry="24"/>
+    <ellipse cx="730" cy="100" rx="50" ry="28"/>
+  </g>
+
+  <!-- Distant Mountains/Hills -->
+  <path d="M0 320 Q200 240 400 310 T800 280 L800 500 L0 500 Z" fill="#60a5fa" opacity="0.35"/>
+  <path d="M0 340 Q300 280 600 330 T800 310 L800 500 L0 500 Z" fill="#3b82f6" opacity="0.25"/>
+
+  <!-- University Grand Building (Center) -->
+  <g filter="url(#softShadow)">
+    <!-- Main Hall Base -->
+    <rect x="220" y="210" width="360" height="170" fill="url(#hallGrad)" rx="4"/>
+    
+    <!-- Central Portico / Columns Base -->
+    <rect x="330" y="200" width="140" height="180" fill="#ffffff"/>
+    
+    <!-- Triangular Pediment -->
+    <polygon points="330,200 400,140 470,200" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    
+    <!-- Academic Crest in Pediment -->
+    <circle cx="400" cy="175" r="14" fill="#2563eb"/>
+    <path d="M394 175 L400 169 L406 175 L400 181 Z" fill="#ffffff"/>
+
+    <!-- Clock Tower / Grand Dome on Top -->
+    <rect x="375" y="90" width="50" height="52" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="400" cy="115" r="16" fill="#0f172a"/>
+    <!-- Clock Hands -->
+    <circle cx="400" cy="115" r="14" fill="#ffffff"/>
+    <line x1="400" y1="115" x2="400" y2="106" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="400" y1="115" x2="407" y2="115" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <!-- Dome Top -->
+    <path d="M370 90 Q400 45 430 90 Z" fill="url(#roofGrad)"/>
+    <line x1="400" y1="45" x2="400" y2="30" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <!-- Spire Star -->
+    <polygon points="400,26 403,32 409,32 404,36 406,42 400,38 394,42 396,36 391,32 397,32" fill="#f59e0b"/>
+
+    <!-- Columns (Classic Portico) -->
+    <g fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5">
+      <rect x="345" y="200" width="12" height="170" rx="2"/>
+      <rect x="375" y="200" width="12" height="170" rx="2"/>
+      <rect x="413" y="200" width="12" height="170" rx="2"/>
+      <rect x="443" y="200" width="12" height="170" rx="2"/>
+    </g>
+
+    <!-- Main Grand Portal / Doors -->
+    <path d="M382 300 Q400 280 418 300 L418 375 L382 375 Z" fill="#1e293b"/>
+
+    <!-- Windows Left Wing -->
+    <g fill="url(#glassGrad)">
+      <rect x="245" y="235" width="22" height="35" rx="3"/>
+      <rect x="280" y="235" width="22" height="35" rx="3"/>
+      <rect x="245" y="295" width="22" height="35" rx="3"/>
+      <rect x="280" y="295" width="22" height="35" rx="3"/>
+    </g>
+
+    <!-- Windows Right Wing -->
+    <g fill="url(#glassGrad)">
+      <rect x="498" y="235" width="22" height="35" rx="3"/>
+      <rect x="533" y="235" width="22" height="35" rx="3"/>
+      <rect x="498" y="295" width="22" height="35" rx="3"/>
+      <rect x="533" y="295" width="22" height="35" rx="3"/>
+    </g>
+
+    <!-- Side Wings (Left & Right Modern Science Wings) -->
+    <rect x="130" y="250" width="90" height="130" fill="#e2e8f0" rx="2"/>
+    <rect x="145" y="270" width="60" height="20" fill="url(#glassGrad)" rx="2"/>
+    <rect x="145" y="305" width="60" height="20" fill="url(#glassGrad)" rx="2"/>
+    <rect x="145" y="340" width="60" height="20" fill="url(#glassGrad)" rx="2"/>
+
+    <rect x="580" y="250" width="90" height="130" fill="#e2e8f0" rx="2"/>
+    <rect x="595" y="270" width="60" height="20" fill="url(#glassGrad)" rx="2"/>
+    <rect x="595" y="305" width="60" height="20" fill="url(#glassGrad)" rx="2"/>
+    <rect x="595" y="340" width="60" height="20" fill="url(#glassGrad)" rx="2"/>
+  </g>
+
+  <!-- Green Campus Lawn Foreground -->
+  <path d="M0 370 Q400 350 800 370 L800 500 L0 500 Z" fill="url(#lawnGrad)"/>
+
+  <!-- Campus Walkway / Path leading to University -->
+  <path d="M350 500 L390 375 L410 375 L450 500 Z" fill="url(#pathGrad)"/>
+
+  <!-- Campus Trees & Foliage (Left Side) -->
+  <g>
+    <!-- Trunk -->
+    <rect x="90" y="340" width="16" height="60" fill="#78350f" rx="3"/>
+    <!-- Tree Leaves -->
+    <circle cx="98" cy="310" r="45" fill="#15803d"/>
+    <circle cx="75" cy="325" r="35" fill="#16a34a"/>
+    <circle cx="120" cy="320" r="38" fill="#22c55e"/>
+
+    <rect x="40" y="360" width="12" height="50" fill="#78350f" rx="2"/>
+    <circle cx="46" cy="335" r="35" fill="#15803d"/>
+    <circle cx="65" cy="345" r="28" fill="#16a34a"/>
+  </g>
+
+  <!-- Campus Trees & Foliage (Right Side) -->
+  <g>
+    <!-- Trunk -->
+    <rect x="690" y="340" width="16" height="60" fill="#78350f" rx="3"/>
+    <!-- Tree Leaves -->
+    <circle cx="698" cy="310" r="45" fill="#15803d"/>
+    <circle cx="675" cy="325" r="35" fill="#16a34a"/>
+    <circle cx="720" cy="320" r="38" fill="#22c55e"/>
+
+    <rect x="745" y="360" width="12" height="50" fill="#78350f" rx="2"/>
+    <circle cx="751" cy="335" r="35" fill="#15803d"/>
+    <circle cx="730" cy="345" r="28" fill="#16a34a"/>
+  </g>
+
+  <!-- University Students Walking on Lawn / Pathway -->
+  <!-- Student 1 (Graduate with cap) -->
+  <g transform="translate(370, 410) scale(0.9)">
+    <!-- Shadow -->
+    <ellipse cx="12" cy="78" rx="14" ry="4" fill="#0f172a" opacity="0.3"/>
+    <!-- Body -->
+    <rect x="5" y="24" width="14" height="32" fill="#1e3a8a" rx="4"/>
+    <rect x="7" y="54" width="4" height="22" fill="#334155"/>
+    <rect x="13" y="54" width="4" height="22" fill="#334155"/>
+    <!-- Head -->
+    <circle cx="12" cy="14" r="8" fill="#fed7aa"/>
+    <!-- Mortarboard Cap -->
+    <polygon points="12,2 25,7 12,12 -1,7" fill="#0f172a"/>
+    <line x1="20" y1="7" x2="23" y2="16" stroke="#f59e0b" stroke-width="1.5"/>
+    <!-- Book in hand -->
+    <rect x="19" y="32" width="7" height="12" fill="#dc2626" rx="1"/>
+  </g>
+
+  <!-- Student 2 (Student with backpack) -->
+  <g transform="translate(425, 418) scale(0.85)">
+    <!-- Shadow -->
+    <ellipse cx="12" cy="78" rx="14" ry="4" fill="#0f172a" opacity="0.3"/>
+    <!-- Body -->
+    <rect x="5" y="24" width="14" height="30" fill="#0284c7" rx="4"/>
+    <rect x="7" y="52" width="4" height="24" fill="#1e293b"/>
+    <rect x="13" y="52" width="4" height="24" fill="#1e293b"/>
+    <!-- Backpack -->
+    <rect x="-1" y="26" width="6" height="18" fill="#b45309" rx="2"/>
+    <!-- Head -->
+    <circle cx="12" cy="14" r="8" fill="#fcd34d"/>
+    <!-- Hair -->
+    <path d="M5 14 Q12 4 19 14 Q12 8 5 14 Z" fill="#78350f"/>
+  </g>
+
+  <!-- Campus Light Posts -->
+  <g stroke="#0f172a" stroke-width="2">
+    <line x1="330" y1="390" x2="330" y2="445"/>
+    <circle cx="330" cy="388" r="4" fill="#fef08a"/>
+    
+    <line x1="470" y1="390" x2="470" y2="445"/>
+    <circle cx="470" cy="388" r="4" fill="#fef08a"/>
+  </g>
+</svg>
